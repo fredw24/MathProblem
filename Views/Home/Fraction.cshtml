@@ -1,0 +1,13 @@
+<h2>Welcome to Fraction</h2>
+<p>Solve the fraction based on the decimal</p>
+
+<p>What is Fraction of @TempData["prob"]?</p>  
+    <form action = "FractionAnswer" method = "Post">
+        <input type="number" name="numAnswer"><br>
+        <p>-------------------------------------</p>
+        <input type="number" name="denaAnswer"><br>
+        <input type="submit" value="Submit Answer">
+    </form> 
+<a href = "/">Home</a>
+
+<h2>Right @TempData["score"] | Wrong @TempData["wrong"]</h2>
