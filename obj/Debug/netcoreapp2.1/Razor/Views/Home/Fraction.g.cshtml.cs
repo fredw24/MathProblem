@@ -66,7 +66,7 @@ using MathProblem.Models;
             WriteLiteral("?</p>  \r\n    ");
             EndContext();
             BeginContext(133, 273, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "18c3ed51fa2b4ae6a96422625183d7ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b7aeee0419c4170b53c71a58d14d59b", async() => {
                 BeginContext(181, 218, true);
                 WriteLiteral("\r\n        <input type=\"number\" name=\"numAnswer\"><br>\r\n        <p>-------------------------------------</p>\r\n        <input type=\"number\" name=\"denaAnswer\"><br>\r\n        <input type=\"submit\" value=\"Submit Answer\">\r\n    ");
                 EndContext();

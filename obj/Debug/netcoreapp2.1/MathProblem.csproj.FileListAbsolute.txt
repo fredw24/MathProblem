@@ -31,3 +31,4 @@ C:\Users\Fred\Documents\C#\MathProblem\obj\Debug\netcoreapp2.1\Razor\Views\Home\
 C:\Users\Fred\Documents\C#\MathProblem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Remainder.g.cshtml.cs
 C:\Users\Fred\Documents\C#\MathProblem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Decimal.g.cshtml.cs
 C:\Users\Fred\Documents\C#\MathProblem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Fraction.g.cshtml.cs
+C:\Users\Fred\Documents\C#\MathProblem\obj\Debug\netcoreapp2.1\Razor\Views\Home\Power.g.cshtml.cs

@@ -231,6 +231,30 @@ namespace MathProblem.Controllers
             return View();
 
         }
+        [Route("Power")]
+        [HttpGet]
+        public IActionResult Power()
+        {
+            Random rand = new Random();
+            int? score = HttpContext.Session.GetInt32("score");
+            int? wrong = HttpContext.Session.GetInt32("wrong");
+            if (score == null){
+                HttpContext.Session.SetInt32("score", (int)0);
+                HttpContext.Session.SetInt32("wrong", (int)0);
+            }
+
+            int prob1Set = rand.Next(10);
+            int prob2Set = rand.Next(0,4);
+
+            HttpContext.Session.SetInt32("prob1", (int)prob1Set);
+            HttpContext.Session.SetInt32("prob2", (int)prob2Set);
+            TempData["score"] = score;
+            TempData["wrong"] = wrong;
+            TempData["prob1"] = prob1Set;
+            TempData["prob2"] = prob2Set;
+            return View();  
+
+        }
 
         [Route("Addanswers")]
         [HttpPost]
@@ -431,6 +455,33 @@ namespace MathProblem.Controllers
             }
 
             return Redirect("/Fraction");
+
+        }
+
+        [Route("PowerAnswer")]
+        [HttpPost]
+        public IActionResult PowerAnwser(int powerAnswer)
+        {
+         
+            int? prob1 = HttpContext.Session.GetInt32("prob1");
+            int? prob2 = HttpContext.Session.GetInt32("prob2");
+
+            int matchAnswer = (int) Math.Pow((double) prob1,(double) prob2);
+            if (matchAnswer == powerAnswer)
+            {
+                int? score = HttpContext.Session.GetInt32("score");
+                score++;
+                HttpContext.Session.SetInt32("score", (int)score);
+
+            }
+            else
+            {
+                int? wrong = HttpContext.Session.GetInt32("wrong");
+                wrong++;
+                HttpContext.Session.SetInt32("wrong", (int)wrong);
+            }
+
+            return Redirect("/power");
 
         }
     }
